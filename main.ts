@@ -19,7 +19,7 @@ neopixelStrip.show()
 basic.showIcon(IconNames.Happy)
 
 // traffic light
-input.onButtonPressed(Button.B, function () {
+input.onButtonPressed(Button.A, function () {
     basic.showIcon(IconNames.Yes)
     // green
     neopixelStrip.setPixelColor(2, neopixel.colors(NeoPixelColors.Green))
@@ -35,14 +35,6 @@ input.onButtonPressed(Button.B, function () {
     neopixelStrip.setPixelColor(0, neopixel.colors(NeoPixelColors.Red))
     neopixelStrip.show()
     pause(3000)
-})
-
-// cancel
-input.onButtonPressed(Button.B, function () {
     neopixelStrip.setPixelColor(0, neopixel.colors(NeoPixelColors.Black))
-    neopixelStrip.setPixelColor(1, neopixel.colors(NeoPixelColors.Black))
-    neopixelStrip.setPixelColor(2, neopixel.colors(NeoPixelColors.Black))
-    neopixelStrip.setPixelColor(3, neopixel.colors(NeoPixelColors.Black))
     neopixelStrip.show()
-    basic.showIcon(IconNames.Happy)
 })
